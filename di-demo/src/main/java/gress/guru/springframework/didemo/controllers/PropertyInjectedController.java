@@ -12,10 +12,10 @@ import javax.annotation.Resource;
 @Controller
 public class PropertyInjectedController {
 
-    @Autowired
-    public GreetingService greetingServiceImpl;
+    @Resource(name="greetingServiceImpl")
+    public GreetingService greetingService;
 
     public String sayHello(){
-        return greetingServiceImpl.sayGreeting();
+        return greetingService.sayGreeting();
     }
 }
