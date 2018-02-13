@@ -1,7 +1,6 @@
 package gress.guru.springframework.didemo.controllers;
 
 import gress.guru.springframework.didemo.services.GreetingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
@@ -12,10 +11,10 @@ import javax.annotation.Resource;
 @Controller
 public class PropertyInjectedController {
 
-    @Resource(name="greetingServiceImpl")
+    @Resource(name = "greetingServiceImpl")
     public GreetingService greetingService;
 
-    public String sayHello(){
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }

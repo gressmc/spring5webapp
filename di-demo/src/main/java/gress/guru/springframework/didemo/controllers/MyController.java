@@ -1,7 +1,6 @@
 package gress.guru.springframework.didemo.controllers;
 
 import gress.guru.springframework.didemo.services.GreetingService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -16,7 +15,7 @@ public class MyController {
         this.greetingService = greetingService;
     }
 
-    public String hello(){
+    public String hello() {
         System.out.println("Hello!!!"); // Noncompliant
         return greetingService.sayGreeting();
     }
